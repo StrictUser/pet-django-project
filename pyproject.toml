@@ -7,6 +7,7 @@ authors = ["strictodmin"]
 [tool.poetry.dependencies]
 python = "^3.7"
 django = "^3.0.3"
+pillow = "^7.0.0"
 
 
 [tool.poetry.dev-dependencies]
