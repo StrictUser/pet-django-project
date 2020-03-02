@@ -9,6 +9,7 @@ class Category(models.Model):
     description = models.TextField("Short description of the category")
     url = models.SlugField(max_length=200, unique=True)
     img = models.ImageField("Image for category", upload_to="mages/")
+    objects = models.Manager()
 
     def __str__(self):
         return self.name
@@ -28,8 +29,8 @@ class OsintServices(models.Model):
                                  verbose_name="OSINT category",
                                  on_delete=models.SET_NULL,
                                  null=True)
-    
-    objects=models.Manager()
+
+    objects = models.Manager()
 
     def __str__(self):
         return self.name

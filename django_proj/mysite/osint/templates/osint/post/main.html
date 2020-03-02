@@ -25,3 +25,13 @@
     {% endfor %}
 
 {% endblock %}
+
+{% block menu %}
+
+    {% for item in menu %}
+        <a href="/osint/{{ item.url }}/" class="mainmenu">
+            {{ item.name }}
+        </a>
+    {% endfor %}
+
+{% endblock %}
