@@ -1,0 +1,27 @@
+{% extends "osint/base.html" %}
+
+{% block title %}OSINT services{% endblock %}
+
+{% block content %}
+
+    <h1>
+        OSINT - services
+    </h1>
+
+    {% for post in posts %}
+
+    <div class="osint">
+        <h3>
+            {{ post.name }}
+        </h3>
+        <div class="osinttext">
+            {{ post.description }}
+        </div>
+        <div class="category">
+            {{ post.category }}
+        </div>
+    </div>
+
+    {% endfor %}
+
+{% endblock %}

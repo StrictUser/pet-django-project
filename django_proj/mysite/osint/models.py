@@ -28,6 +28,8 @@ class OsintServices(models.Model):
                                  verbose_name="OSINT category",
                                  on_delete=models.SET_NULL,
                                  null=True)
+    
+    objects=models.Manager()
 
     def __str__(self):
         return self.name
